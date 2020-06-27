@@ -1,0 +1,111 @@
+{
+	"info": {
+		"_postman_id": "051d72b3-4d8f-4b2a-8912-62081d200bbf",
+		"name": "SingleStone",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST Create a new contact",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": {\r\n    \"first\": \"Harold\",\r\n    \"middle\": \"Francis\",\r\n    \"last\": \"Gilkey\"\r\n  },\r\n  \"address\": {\r\n    \"street\": \"8360 High Autumn Row\",\r\n    \"city\": \"Cannon\",\r\n    \"state\": \"Delaware\",\r\n    \"zip\": \"19797\"\r\n  },\r\n  \"phone\": [\r\n    {\r\n      \"number\": \"302-611-9148\",\r\n      \"type\": \"home\"\r\n    },\r\n    {\r\n      \"number\": \"302-532-9427\",\r\n      \"type\": \"mobile\"\r\n    }\r\n  ],\r\n  \"email\": \"harold.gilkey@yahoo.com\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:51044/contact",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51044",
+					"path": [
+						"contact"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET List all contacts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Contect-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:51044/contacts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51044",
+					"path": [
+						"contacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Update a contact",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:51044/contacts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51044",
+					"path": [
+						"contacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Get a specific contact",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Delete a contact",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
